@@ -1,0 +1,208 @@
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --border: 2px solid lightgray;
+  --border-hover: 2px solid rgb(157, 151, 151);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+fieldset {
+  border: var(--border);
+  padding: 2rem;
+  width: 30rem;
+}
+
+fieldset:hover {
+  border: var(--border-hover);
+}
+
+legend {
+  font-size: 2.4rem;
+}
+
+.search {
+  display: flex;
+  margin-block: 1rem;
+  width: 100%;
+}
+
+.search-field {
+  margin-right: 0.5rem;
+  padding-left: 0.5rem;
+  height: 3.5rem;
+  flex-grow: 1;
+  border: var(--border);
+  padding-top: 0.6rem;
+}
+
+.search-field:hover {
+  border: var(--border-hover);
+}
+
+.search-field::placeholder {
+  font-size: 1.6rem;
+}
+
+.search-btn {
+  width: 3.5rem;
+  height: 3.5rem;
+  font-size: 2rem;
+  background: none;
+  border: var(--border);
+  color: rgb(111, 114, 116);
+}
+
+.search-btn:hover {
+  border: var(--border-hover);
+}
+
+p {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+/* Radio button styles */
+
+.radiobtn-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-left: 2.5rem;
+  margin: 1rem 0.5rem;
+  font-size: 1.6rem;
+  user-select: none;
+}
+
+.wrapper-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.wrapper-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.radiobtn-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.9rem;
+  width: 1.9rem;
+  background-color: #eee;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.custom-radio::after {
+  content: "";
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  background-color: #fff;
+  display: none;
+}
+
+.radiobtn-container:hover .custom-radio {
+  background-color: #ccc;
+}
+
+.radiobtn-container input:checked + .custom-radio {
+  background-color: #444444;
+}
+
+.radiobtn-container input:focus + .custom-radio {
+  outline: #3090df auto 4px;
+}
+
+.radiobtn-container input:checked + .custom-radio::after {
+  display: block;
+}
+
+/* Checkbox styles */
+
+.checkbx-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding-left: 2.5rem;
+  /* margin: 1rem 0.5rem; */
+  font-size: 1.6rem;
+  user-select: none;
+}
+
+.checkbx-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbx {
+  position: absolute;
+  bottom: 0;
+  left: 2rem;
+  height: 1.9rem;
+  width: 1.9rem;
+  background-color: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbx-container:hover .custom-checkbx {
+  background-color: #ccc;
+}
+
+.checkbx-container input:checked + .custom-checkbx {
+  background-color: #444444;
+}
+
+.custom-checkbx::after {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0.7rem;
+  border: solid white;
+  border-width: 0 0.2rem 0.2rem 0;
+  transform: rotate(45deg);
+  width: 0.3rem;
+  height: 0.6rem;
+  display: none;
+}
+
+.checkbx-container input:checked + .custom-checkbx::after {
+  display: block;
+}
+
+.checkbx-container input:focus + .custom-checkbx {
+  outline: #3090df auto 4px;
+}

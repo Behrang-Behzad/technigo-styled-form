@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styled form</title>
+
+    <!-- google fonts imported -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="CSS/normalize.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>This is a search form</legend>
+        <div class="wrapper-col">
+          <p>How many search results would you like?</p>
+
+          <!-- Radio buttons -->
+
+          <div class="wrapper-row">
+            <label class="radiobtn-container"
+              >20 <input type="radio" name="answer" value="20" checked />
+              <span class="custom-radio"></span>
+            </label>
+            <label class="radiobtn-container"
+              >40 <input type="radio" name="answer" value="40" />
+              <span class="custom-radio"></span>
+            </label>
+            <label class="radiobtn-container"
+              >60 <input type="radio" name="answer" value="60" />
+              <span class="custom-radio"></span>
+            </label>
+            <label class="radiobtn-container"
+              >80 <input type="radio" name="answer" value="80" />
+              <span class="custom-radio"></span>
+            </label>
+            <label class="radiobtn-container"
+              >100 <input type="radio" name="answer" value="100" />
+              <span class="custom-radio"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Checkbox -->
+
+        <div class="wrapper-checkbx">
+          <label class="checkbx-container"
+            >Include results in Swedish?
+            <input type="checkbox" name="" checked />
+            <span class="custom-checkbx"></span
+          ></label>
+        </div>
+        <div class="search">
+          <input
+            class="search-field"
+            type="text"
+            name="search"
+            id=""
+            max="25"
+            placeholder="Search . . ."
+          />
+          <button class="search-btn" type="button">🔍︎</button>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
